@@ -30,7 +30,7 @@ function Hero() {
       <div ref={ref as React.Ref<HTMLDivElement>} className={cx("relative overflow-hidden", inView && "is-in")}>
       {/* ambient watermark */}
       <p className="pointer-events-none absolute -top-8 left-0 select-none font-display text-[26vw] font-semibold italic leading-none text-ink/[0.035]" aria-hidden="true">
-        Avani
+        ✦
       </p>
 
       <div className="container-x grid items-center gap-14 pb-20 pt-12 md:pt-16 lg:grid-cols-12 lg:gap-8 lg:pb-28">
@@ -123,9 +123,9 @@ function Hero() {
                   <path id="stamp-circle" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" />
                 </defs>
                 <text fontSize="9.2" letterSpacing="2.6" className="fill-brass font-body font-semibold uppercase">
-                  <textPath href="#stamp-circle">Est. 2019 · Jaipur · Small batch ·</textPath>
+                  <textPath href="#stamp-circle">Jaipur · Small batch · Numbered ·</textPath>
                 </text>
-                <text x="50" y="56" textAnchor="middle" fontSize="20" className="fill-pine font-display italic">A</text>
+                <path d="M50 39 L59 50 L50 61 L41 50 Z" className="fill-pine" />
               </svg>
             </div>
           </div>
@@ -165,7 +165,7 @@ function ValueMarquee() {
 
 export default function Home() {
   useDocumentTitle(
-    "AVANI — Considered Goods, Made to Last",
+    "Considered Goods, Made to Last",
     "Premium small-batch apparel, footwear and everyday carry. Designed in Jaipur, made to be kept. Free shipping over ₹999."
   );
 
@@ -281,7 +281,7 @@ export default function Home() {
       <BrandStory />
 
       {/* Trust strip */}
-      <section className="border-y border-ink/12 bg-card" aria-label="Why shop with Avani">
+      <section className="border-y border-ink/12 bg-card" aria-label="Why shop with us">
         <div className="container-x grid grid-cols-1 divide-y divide-ink/10 sm:grid-cols-2 sm:divide-x lg:grid-cols-4 lg:divide-y-0">
           {[
             { icon: <IconLeaf size={22} />, title: "Premium materials", copy: "Supima cotton, full-grain leather, extra-fine merino — nothing synthetic, nothing hidden." },
@@ -352,14 +352,14 @@ function BrandStory() {
       <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
         <div className="lg:sticky lg:top-28 lg:self-start">
           <Reveal>
-            <p className="eyebrow">Why Avani</p>
+            <p className="eyebrow">The promise</p>
             <h2 id="story-heading" className="mt-5 font-display text-[clamp(2.2rem,4.5vw,3.6rem)] font-medium leading-[1.06] tracking-tight">
               Fewer, better things —
               <br />
               <em className="font-light italic text-pine">made slowly,</em> made once.
             </h2>
             <p className="mt-6 max-w-md text-[15px] leading-relaxed text-ink-soft">
-              We started Avani in 2019 with a simple frustration: everything was designed to be
+              We started with a simple frustration: everything was designed to be
               replaced. So we began making the opposite — a permanent collection of nine objects,
               each engineered with the people who use it, in batches small enough to number by hand.
             </p>
@@ -371,7 +371,7 @@ function BrandStory() {
               <Link to="/about" className="btn btn-ink">
                 Read our story <IconArrow size={15} className="btn-arrow" />
               </Link>
-              <p className="font-display text-lg italic text-ink-mute">— The Avani Atelier</p>
+              <p className="font-display text-lg italic text-ink-mute">— The Atelier</p>
             </div>
           </Reveal>
         </div>
@@ -382,7 +382,7 @@ function BrandStory() {
               <div className="absolute -left-4 -top-4 h-full w-full rounded-md border border-brass/50" aria-hidden="true" />
               <div className="relative overflow-hidden rounded-md">
                 <div className="aspect-[16/11]">
-                  <Img src={ATELIER_IMAGE} alt="The Avani atelier — fabrics, leather and tools arranged on an oak table" className="h-full" imgClassName="anim-kenburns" sizes="(max-width: 1024px) 92vw, 46vw" />
+                  <Img src={ATELIER_IMAGE} alt="The atelier — fabrics, leather and tools arranged on an oak table" className="h-full" imgClassName="anim-kenburns" sizes="(max-width: 1024px) 92vw, 46vw" />
                 </div>
               </div>
               <figcaption className="mt-3 text-xs text-ink-mute">The cutting bench in Chandpol Bazar, Jaipur — where every batch begins.</figcaption>

@@ -52,8 +52,8 @@ export default function Shop() {
   const firstRun = useRef(true);
 
   useDocumentTitle(
-    filters.category === "All" ? "Shop All Goods — AVANI" : `${filters.category} — AVANI`,
-    "Browse the AVANI permanent collection: heavyweight apparel, resoleable footwear, leather and canvas carry."
+    filters.category === "All" ? "Shop All Goods" : filters.category,
+    "Browse the permanent collection: heavyweight apparel, resoleable footwear, leather and canvas carry."
   );
   useLockBody(sheetOpen);
   useOnEscape(() => setSheetOpen(false), sheetOpen);
@@ -234,7 +234,7 @@ export default function Shop() {
                 Can't find what you're after? We take requests — tell us what you wish we made.
               </p>
               <a
-                href={createWhatsAppChatLink("Hi AVANI! I have an idea for an object I'd love you to add to the permanent collection:")}
+                href={createWhatsAppChatLink("Hi! I have an idea for an object I'd love you to add to the permanent collection:")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline btn-sm mt-4"

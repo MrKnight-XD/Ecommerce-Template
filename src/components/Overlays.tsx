@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FREE_SHIPPING_THRESHOLD, STORE_NAME } from "../config/store";
+import { FREE_SHIPPING_THRESHOLD } from "../config/store";
 import { CATEGORIES, PRODUCTS, getProductById } from "../data/products";
 import { describeVariant, useStore } from "../context/StoreContext";
 import { useLockBody, useOnEscape } from "../hooks/useApp";
@@ -361,5 +361,4 @@ export function ToastHost() {
   );
 }
 
-/* Re-export helper used by pages */
-export { STORE_NAME };
+

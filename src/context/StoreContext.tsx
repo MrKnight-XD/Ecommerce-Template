@@ -58,8 +58,8 @@ export function cartLineKey(productId: number, color?: string, size?: string): s
 }
 
 export function StoreProvider({ children }: { children: ReactNode }) {
-  const [cart, setCart] = useState<CartItem[]>(() => loadJSON<CartItem[]>("avani:cart", []));
-  const [wishlist, setWishlist] = useState<number[]>(() => loadJSON<number[]>("avani:wishlist", []));
+  const [cart, setCart] = useState<CartItem[]>(() => loadJSON<CartItem[]>("store:cart", []));
+  const [wishlist, setWishlist] = useState<number[]>(() => loadJSON<number[]>("store:wishlist", []));
   const [toasts, setToasts] = useState<Toast[]>([]);
   const [isCartOpen, setCartOpen] = useState(false);
   const [isSearchOpen, setSearchOpen] = useState(false);
@@ -68,7 +68,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     try {
-      window.localStorage.setItem("avani:cart", JSON.stringify(cart));
+      window.localStorage.setItem("store:cart", JSON.stringify(cart));
     } catch {
       /* storage unavailable — cart lives in memory */
     }
@@ -76,7 +76,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     try {
-      window.localStorage.setItem("avani:wishlist", JSON.stringify(wishlist));
+      window.localStorage.setItem("store:wishlist", JSON.stringify(wishlist));
     } catch {
       /* storage unavailable */
     }

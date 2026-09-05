@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { ANNOUNCEMENTS, STORE_NAME } from "../config/store";
+import { ANNOUNCEMENTS } from "../config/store";
 import { CATEGORIES } from "../data/products";
 import { useStore } from "../context/StoreContext";
 import { useLockBody, useScrolled } from "../hooks/useApp";
@@ -122,9 +122,8 @@ function MobileMenu() {
   return (
     <div className="fixed inset-0 z-[65] flex flex-col bg-night text-paper" role="dialog" aria-modal="true" aria-label="Menu">
       <div className="container-x flex h-[68px] items-center justify-between">
-        <Link to="/" onClick={() => setMenuOpen(false)} className="flex items-center gap-3">
+        <Link to="/" onClick={() => setMenuOpen(false)} className="flex items-center" aria-label="Home">
           <LogoMark size={32} />
-          <span className="font-display text-lg font-medium tracking-[0.14em]">{STORE_NAME}</span>
         </Link>
         <button type="button" onClick={() => setMenuOpen(false)} aria-label="Close menu" className="flex h-10 w-10 items-center justify-center rounded-full border border-paper/25 transition-colors hover:border-paper">
           <IconClose size={18} />
@@ -183,12 +182,8 @@ export default function Navbar() {
       >
         <div className="container-x flex h-[68px] items-center justify-between gap-4">
           <div className="flex items-center gap-8">
-            <Link to="/" className="flex items-center gap-3" aria-label={`${STORE_NAME} home`}>
+            <Link to="/" className="flex items-center" aria-label="Home">
               <LogoMark />
-              <span className="hidden flex-col sm:flex">
-                <span className="font-display text-[19px] font-semibold leading-none tracking-[0.16em] text-ink">{STORE_NAME}</span>
-                <span className="mt-1 text-[8.5px] font-semibold uppercase tracking-[0.34em] text-ink-mute">Goods · Est. 2019</span>
-              </span>
             </Link>
           </div>
 

@@ -173,14 +173,16 @@ export const IconXSocial = (p: IconProps) => (
   </svg>
 );
 
-/** Brand mark — a stamped "A" monogram inside a pine tile. */
+/** Abstract mark — a four-point star inside a pine tile. No lettering. */
 export const LogoMark = ({ size = 34 }: { size?: number }) => (
   <span
-    className="inline-flex items-center justify-center rounded-[7px] bg-pine text-paper font-display italic"
-    style={{ width: size, height: size, fontSize: size * 0.62 }}
+    className="inline-flex items-center justify-center rounded-[7px] bg-pine text-paper"
+    style={{ width: size, height: size }}
     aria-hidden="true"
   >
-    A
+    <svg width={Math.round(size * 0.52)} height={Math.round(size * 0.52)} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 1.5 L15 9 L22.5 12 L15 15 L12 22.5 L9 15 L1.5 12 L9 9 Z" />
+    </svg>
   </span>
 );
 

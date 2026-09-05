@@ -35,8 +35,8 @@ const PROCESS = [
 
 export default function About() {
   useDocumentTitle(
-    "Our Story — AVANI",
-    "AVANI makes nine considered goods in small numbered batches from Jaipur — designed to be kept, repaired and passed on."
+    "Our Story",
+    "Nine considered goods made in small numbered batches from Jaipur — designed to be kept, repaired and passed on."
   );
 
   return (
@@ -44,14 +44,14 @@ export default function About() {
       {/* Opening statement */}
       <section className="container-x pt-14 md:pt-20" aria-labelledby="about-heading">
         <div className="max-w-4xl">
-          <p className="eyebrow anim-fade-up">Our story · Est. 2019</p>
+          <p className="eyebrow anim-fade-up">Our story</p>
           <h1 id="about-heading" className="anim-fade-up mt-6 font-display text-[clamp(2.6rem,6.5vw,5rem)] font-medium leading-[1.04] tracking-tight" style={{ animationDelay: "120ms" }}>
             We make nine things.
             <br />
             <em className="font-light italic text-pine">On purpose.</em>
           </h1>
           <p className="anim-fade-up mt-7 max-w-2xl text-[15px] leading-relaxed text-ink-soft md:text-base" style={{ animationDelay: "240ms" }}>
-            Avani began with a torn strap. In 2019, our founder Aanya watched a "premium" bag fail
+            It began with a torn strap. Our founder watched a "premium" bag fail
             in six months and couldn't find a single person willing to repair it. The answer became
             obvious: stop making more things, start making things that stay. Today, forty-two
             partner artisans across Rajasthan, Kanpur and Coimbatore make a permanent collection
@@ -63,7 +63,7 @@ export default function About() {
         <Reveal className="mt-14">
           <figure className="relative overflow-hidden rounded-md">
             <div className="aspect-[16/9] md:aspect-[21/9]">
-              <Img src={ATELIER_IMAGE} alt="The Avani atelier in Jaipur — fabrics, leather and tools on an oak table" eager className="h-full" imgClassName="anim-kenburns" sizes="94vw" />
+              <Img src={ATELIER_IMAGE} alt="The atelier in Jaipur — fabrics, leather and tools on an oak table" eager className="h-full" imgClassName="anim-kenburns" sizes="94vw" />
             </div>
             <figcaption className="absolute bottom-5 left-5 rounded-full bg-paper/90 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-ink backdrop-blur-sm">
               The atelier · Chandpol Bazar, Jaipur

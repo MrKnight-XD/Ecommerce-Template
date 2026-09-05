@@ -1,5 +1,5 @@
 /* ============================================================================
- *  AVANI — PRODUCT CATALOGUE
+ *  PRODUCT CATALOGUE
  *  ----------------------------------------------------------------------------
  *  Store owners: add a new product by appending an object to PRODUCTS below.
  *  Everything else (shop grid, search, filters, WhatsApp messages, related

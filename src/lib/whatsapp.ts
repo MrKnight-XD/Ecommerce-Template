@@ -1,4 +1,4 @@
-import { STORE_NAME, WHATSAPP_NUMBER } from "../config/store";
+import { WHATSAPP_NUMBER } from "../config/store";
 import { formatINR } from "./utils";
 import type { CartItem, Product } from "../data/products";
 import { getProductById } from "../data/products";
@@ -46,7 +46,7 @@ export function createWhatsAppProductMessage(
   selection: ProductSelection
 ): string {
   const lines: string[] = [
-    `Hi ${STORE_NAME}! I'd like to order the following product:`,
+    `Hi! I'd like to order the following product:`,
     "",
     `Product: ${product.name}`,
   ];
@@ -66,7 +66,7 @@ export function createWhatsAppProductLink(
 
 /** Pre-filled message containing every line in the cart (Checkout). */
 export function createWhatsAppCartMessage(items: ResolvedCartLine[]): string {
-  const lines: string[] = [`Hi ${STORE_NAME}! I'd like to place an order:`, ""];
+  const lines: string[] = [`Hi! I'd like to place an order:`, ""];
   items.forEach((item, index) => {
     lines.push(`${index + 1}. ${item.product.name}`);
     const variant = variantLine(item.size, item.color);
@@ -87,7 +87,7 @@ export function createWhatsAppCartLink(items: ResolvedCartLine[]): string {
 
 /** Generic "chat with us" link (contact page, footer). */
 export function createWhatsAppChatLink(message?: string): string {
-  return buildWhatsAppUrl(message ?? `Hi ${STORE_NAME}! I have a question about your products.`);
+  return buildWhatsAppUrl(message ?? `Hi! I have a question about your products.`);
 }
 
 /** Resolve raw cart items (ids) into full product lines for messaging. */
