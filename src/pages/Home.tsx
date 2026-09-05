@@ -29,8 +29,8 @@ function Hero() {
     <section aria-labelledby="hero-heading">
       <div ref={ref as React.Ref<HTMLDivElement>} className={cx("relative overflow-hidden", inView && "is-in")}>
       {/* ambient watermark */}
-      <p className="pointer-events-none absolute -top-8 left-0 select-none font-display text-[26vw] font-semibold italic leading-none text-ink/[0.035]" aria-hidden="true">
-        ✦
+      <p className="pointer-events-none absolute -top-4 left-0 select-none whitespace-nowrap font-display text-[11vw] font-semibold italic leading-none text-ink/[0.045]" aria-hidden="true">
+        BRAND NAME HERE
       </p>
 
       <div className="container-x grid items-center gap-14 pb-20 pt-12 md:pt-16 lg:grid-cols-12 lg:gap-8 lg:pb-28">
@@ -123,7 +123,7 @@ function Hero() {
                   <path id="stamp-circle" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" />
                 </defs>
                 <text fontSize="9.2" letterSpacing="2.6" className="fill-brass font-body font-semibold uppercase">
-                  <textPath href="#stamp-circle">Jaipur · Small batch · Numbered ·</textPath>
+                  <textPath href="#stamp-circle">Est. 2026 · Jaipur · Small batch ·</textPath>
                 </text>
                 <path d="M50 39 L59 50 L50 61 L41 50 Z" className="fill-pine" />
               </svg>
@@ -165,7 +165,7 @@ function ValueMarquee() {
 
 export default function Home() {
   useDocumentTitle(
-    "Considered Goods, Made to Last",
+    "BRAND NAME HERE — Considered Goods, Made to Last",
     "Premium small-batch apparel, footwear and everyday carry. Designed in Jaipur, made to be kept. Free shipping over ₹999."
   );
 

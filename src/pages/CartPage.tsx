@@ -11,7 +11,7 @@ const FLAT_SHIPPING = 79;
 
 export default function CartPage() {
   const { cart, cartCount, subtotal, updateQty, removeFromCart } = useStore();
-  useDocumentTitle("Your Bag", "Review your goods and checkout in one WhatsApp message.");
+  useDocumentTitle("Your Bag — BRAND NAME HERE", "Review your goods and checkout in one WhatsApp message.");
 
   const shipping = subtotal === 0 || subtotal >= FREE_SHIPPING_THRESHOLD ? 0 : FLAT_SHIPPING;
   const total = subtotal + shipping;

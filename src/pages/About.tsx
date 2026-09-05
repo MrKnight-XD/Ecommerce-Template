@@ -35,7 +35,7 @@ const PROCESS = [
 
 export default function About() {
   useDocumentTitle(
-    "Our Story",
+    "Our Story — BRAND NAME HERE",
     "Nine considered goods made in small numbered batches from Jaipur — designed to be kept, repaired and passed on."
   );
 
@@ -44,7 +44,7 @@ export default function About() {
       {/* Opening statement */}
       <section className="container-x pt-14 md:pt-20" aria-labelledby="about-heading">
         <div className="max-w-4xl">
-          <p className="eyebrow anim-fade-up">Our story</p>
+          <p className="eyebrow anim-fade-up">Our story · Est. 2026</p>
           <h1 id="about-heading" className="anim-fade-up mt-6 font-display text-[clamp(2.6rem,6.5vw,5rem)] font-medium leading-[1.04] tracking-tight" style={{ animationDelay: "120ms" }}>
             We make nine things.
             <br />

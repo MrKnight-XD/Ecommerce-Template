@@ -48,7 +48,7 @@ export default function Contact() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [sent, setSent] = useState(false);
 
-  useDocumentTitle("Contact", "Talk to a human. WhatsApp, email or the old-fashioned form — we reply within minutes, 7 days a week.");
+  useDocumentTitle("Contact — BRAND NAME HERE", "Talk to a human. WhatsApp, email or the old-fashioned form — we reply within minutes, 7 days a week.");
 
   const submit = (event: FormEvent) => {
     event.preventDefault();

@@ -14,6 +14,7 @@ import {
 } from "../components/FilterPanel";
 import { ProductCard } from "../components/ProductCard";
 import { Breadcrumbs, IconChevron, IconClose, IconFilter, IconSearch, IconWhatsApp, Reveal, SkeletonCard } from "../components/ui";
+import { STORE_NAME } from "../config/store";
 import { createWhatsAppChatLink } from "../lib/whatsapp";
 
 function applySort(list: typeof PRODUCTS, sort: SortKey) {
@@ -52,7 +53,7 @@ export default function Shop() {
   const firstRun = useRef(true);
 
   useDocumentTitle(
-    filters.category === "All" ? "Shop All Goods" : filters.category,
+    filters.category === "All" ? `Shop All Goods — ${STORE_NAME}` : `${filters.category} — ${STORE_NAME}`,
     "Browse the permanent collection: heavyweight apparel, resoleable footwear, leather and canvas carry."
   );
   useLockBody(sheetOpen);
@@ -234,7 +235,7 @@ export default function Shop() {
                 Can't find what you're after? We take requests — tell us what you wish we made.
               </p>
               <a
-                href={createWhatsAppChatLink("Hi! I have an idea for an object I'd love you to add to the permanent collection:")}
+                href={createWhatsAppChatLink(`Hi ${STORE_NAME}! I have an idea for an object I'd love you to add to the permanent collection:`)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline btn-sm mt-4"

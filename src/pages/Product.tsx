@@ -54,7 +54,7 @@ export default function ProductPage() {
   }, [product?.id]);
 
   useDocumentTitle(
-    product ? `${product.name} — ${formatINR(product.price)}` : "Product not found",
+    product ? `${product.name} — ${formatINR(product.price)} | BRAND NAME HERE` : "Product not found",
     product?.description
   );
 

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { CATEGORIES } from "../data/products";
 import {
   SOCIALS,
+  STORE_LEGAL_NAME,
+  STORE_NAME,
   SUPPORT_EMAIL,
   SUPPORT_HOURS,
   SUPPORT_PHONE_DISPLAY,
@@ -136,8 +138,9 @@ export default function Footer() {
       <div className="container-x relative grid gap-12 py-16 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:py-20">
         {/* Brand */}
         <div>
-          <Link to="/" className="flex items-center" aria-label="Home">
+          <Link to="/" className="flex items-center gap-3" aria-label={`${STORE_NAME} home`}>
             <LogoMark />
+            <span className="font-display text-[19px] font-semibold tracking-[0.16em]">{STORE_NAME}</span>
           </Link>
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-paper/60">
             Considered goods in small batches — apparel, footwear and carry designed in Jaipur
@@ -188,7 +191,7 @@ export default function Footer() {
 
       {/* Legal */}
       <div className="container-x flex flex-col items-center justify-between gap-3 border-t border-paper/10 py-6 text-xs text-paper/45 md:flex-row">
-        <p>© {year} All rights reserved.</p>
+        <p>© {year} {STORE_LEGAL_NAME} All rights reserved.</p>
         <div className="flex items-center gap-6">
           <Link to="/contact?faq=privacy" className="link-line hover:text-paper">Privacy Policy</Link>
           <Link to="/contact?faq=terms" className="link-line hover:text-paper">Terms of Service</Link>
@@ -199,6 +202,12 @@ export default function Footer() {
         </p>
       </div>
 
+      {/* Giant watermark */}
+      <div className="pointer-events-none select-none overflow-hidden" aria-hidden="true">
+        <p className="-mb-[0.23em] whitespace-nowrap text-center font-display text-[9vw] font-semibold leading-none tracking-[0.06em] text-paper/[0.05]">
+          {STORE_NAME}
+        </p>
+      </div>
     </footer>
   );
 }

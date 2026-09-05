@@ -1,9 +1,9 @@
 /* ============================================================================
  *  CENTRAL STORE CONFIGURATION
  *  ----------------------------------------------------------------------------
- *  Store owners: edit this file to change the WhatsApp number, shipping rules
- *  and contact details. Nothing else in the codebase needs to be touched —
- *  every WhatsApp button reads from here.
+ *  Store owners: edit this file to set your brand name, WhatsApp number,
+ *  shipping rules and contact details. Nothing else in the codebase needs
+ *  to be touched — every brand mention and WhatsApp button reads from here.
  * ==========================================================================*/
 
 /**
@@ -11,6 +11,12 @@
  * Example for India: "919876543210"  →  +91 98765 43210
  */
 export const WHATSAPP_NUMBER = "919876543210";
+
+/** Your store's name — shown in the navbar, footer, greetings and WhatsApp messages. */
+export const STORE_NAME = "BRAND NAME HERE";
+
+/** Legal entity used in the footer copyright line. */
+export const STORE_LEGAL_NAME = "BRAND NAME HERE";
 
 export const STORE_TAGLINE = "Considered goods, made to last.";
 
@@ -20,7 +26,7 @@ export const CURRENCY_LOCALE = "en-IN";
 /** Orders above this amount ship free (shown in announcement bar + cart). */
 export const FREE_SHIPPING_THRESHOLD = 999;
 
-export const SUPPORT_EMAIL = "care@yourstore.in";
+export const SUPPORT_EMAIL = "care@brandnamehere.com";
 export const SUPPORT_PHONE_DISPLAY = "+91 98765 43210";
 export const SUPPORT_HOURS = "Mon–Sat, 10:00–19:00 IST";
 export const STUDIO_ADDRESS = "14 Chandpol Bazar, Jaipur, Rajasthan 302001";
